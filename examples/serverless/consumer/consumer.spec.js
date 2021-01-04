@@ -13,6 +13,7 @@ describe("Serverless consumer tests", () => {
     consumer: "SNSPactEventConsumer",
     dir: path.resolve(process.cwd(), "pacts"),
     provider: "SNSPactEventProvider",
+    logLevel: "debug",
   })
 
   describe("receive a pact event", () => {
