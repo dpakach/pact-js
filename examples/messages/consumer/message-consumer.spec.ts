@@ -16,7 +16,7 @@ describe("Message consumer tests", () => {
     dir: path.resolve(process.cwd(), "pacts"),
     pactfileWriteMode: "update",
     provider: "MyJSMessageProvider",
-    logLevel: "info",
+    logLevel: "debug",
   })
 
   describe("receive dog event", () => {
