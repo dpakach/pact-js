@@ -10,7 +10,8 @@ module.exports = {
   createTransaction: (accountId, amountInCents) => {
     return axios.get(accountServiceUrl + "/accounts/search/findOneByAccountNumberId", {
       params: {
-        accountNumber: accountId
+        accountNumber: accountId,
+        anotherValue: '文件.txt'
       },
       headers: {
         Accept: 'application/hal+json'

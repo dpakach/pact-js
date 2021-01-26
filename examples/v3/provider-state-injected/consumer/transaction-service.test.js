@@ -30,7 +30,10 @@ describe("Transaction service - create a new transaction for an account", () => 
       .withRequest({
         method: "GET",
         path: "/accounts/search/findOneByAccountNumberId",
-        query: { accountNumber: fromProviderState("\${accountNumber}", "100") },
+        query: { 
+          accountNumber: fromProviderState("\${accountNumber}", "100"),
+          anotherValue: '文件.txt'
+        },
         headers: { Accept: "application/hal+json" },
       })
       .willRespondWith({
